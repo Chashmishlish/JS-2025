@@ -13,5 +13,5 @@ console.log(`The price of course is $${yy}`)
 //
 
 //commit cammad lines
-// git config --global user.name "Alishba khan"
+// git config --global user.name "Chashmishlish"
 // git config --global user.email "salishkhannn@gmail.com"
