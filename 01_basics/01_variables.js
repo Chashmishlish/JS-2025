@@ -21,5 +21,5 @@ Prefer not to use var
 because of the issue in block scope and functional scope
 */
 
- // 
-// terminal execution line: node 01_basics/01_variables
+ 
+ // terminal execution line: node 01_basics/01_variables
