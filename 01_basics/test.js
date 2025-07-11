@@ -9,8 +9,8 @@ yy= 1000;
 // console.log(xy);
 console.log(`The price of bag is $${xy}`);
 console.log(`The price of pen is $${x}`);
-console.log(`The price of course is $${yy}`);
-
+console.log(`The price of course is $${yy}`)
+//
 
 //commit cammad lines
 // git config --global user.name "Alishba khan"
