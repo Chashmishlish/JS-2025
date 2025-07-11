@@ -21,5 +21,29 @@ Prefer not to use var
 because of the issue in block scope and functional scope
 */
 
+<<<<<<< HEAD
  
  // terminal execution line: node 01_basics/01_variables
+=======
+//Redirecting in the same scope - using var
+ var p = "Ono" 
+ var p = "Uno" //No error! because redeclaration alloweded
+
+ console.log(p);  //prints "Uno"
+
+ //Redirecting in the same scope - using let
+var q = "Oman" 
+var q = "Ohio" //Syntaxrror! because let does not allow redeclaring in the same scope.
+
+ console.log(q)  
+
+ //Redirecting in the same scope - using const
+const fruit = "lemon" 
+fruit = "lime" //Typerror! 
+
+ console.log(fruit) 
+
+
+ 
+// terminal execution line: node 01_basics/01_variables
+>>>>>>> c1e6ad72176f5e7f31e5b9e9c4bd6253e3b54002
