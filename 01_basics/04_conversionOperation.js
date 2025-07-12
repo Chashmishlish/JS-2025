@@ -173,6 +173,48 @@ let gameCounterr = 100;
 console.log(gameCounterr)  //101
 
 
+//Compariso of datatypes in js 
+console.log(2 > 1);  //t
+console.log(2 >= 1); //t
+console.log(2 < 1);  //f
+console.log(2 == 1); //f
+console.log(2 != 1); //t
+
+console.log("2" > 1);  //t -comapring two diff data type, string converted into num
+console.log("02" > 1); //t
+
+//that's why typescipt comes into action
+
+console.log(null > 0); //f (null is empty value)
+console.log(null == 0); //f (0=0)
+console.log(null >= 0); //t 
+console.log(null < 0); //f
+console.log(null <= 0); //t
+
+//the reason is that an equality check == and comparisons >< >=<= works differently
+//comparison converts null into a number, treating it as zero
+//that's why, (3) , null >= 0 is true and (1) null is false
+
+console.log(undefined == 0);//f
+console.log(undefined > 0); //f
+console.log(undefined < 0); //f
+
+// == and === works differently, have diff syntax
+
+// === means strict check
+console.log("2" === 2); //false
+
+// there is less consistency in jS
+
+
+
+
+
+
+
+
+
+
 
 
 
