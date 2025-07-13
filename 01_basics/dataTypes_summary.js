@@ -81,5 +81,7 @@ Return type of variables in JavaScript
        Function  =>  function /  function(object)
        Object  =>  object
 */
+
 // When you learn further prototype, function also acts as a object. Object is the parent one.
 // JavaScript is a dynamically typed language. Because data type will automatically assigned at the time of compilation or code execution.
+
