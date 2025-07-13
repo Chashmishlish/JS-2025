@@ -59,5 +59,3 @@ console.table({
   Dani: `The C is ${res}`
 });
 
-
-
