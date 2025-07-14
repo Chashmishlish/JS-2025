@@ -46,3 +46,24 @@ console.log(str.substring(-5, 4)); // Java (negative ignore)
 // slice
 console.log(str.slice(4, 1)); // "" (start > end = empty)
 console.log(str.slice(-5, -1)); // crip (end se count kiya)
+
+//Input form me aese spaces ajate hain mostly
+const newStringOne = "    Alish    "
+console.log(newStringOne); //consider spaces
+console.log(newStringOne.trim()); //trim spaces/ignore spaces
+
+//replace
+const url = "https://Chashmishlish.com/Khanza%20lish"
+console.log(url.replace('%20' , '-'))
+
+//.includes is used to know whether the word is in our "" or not
+console.log(url.includes('alish')) //false
+console.log(url.includes('lish')) //true
+
+//split
+const gameNames = new String ('GTA-lish')
+const personId = new String ('khanza-lish.com')
+
+console.log(gameName.split('-'));
+console.log(gameNames.split('-'));
+console.log(personId.split('h'));
