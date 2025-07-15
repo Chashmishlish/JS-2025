@@ -30,9 +30,20 @@ const newArray = bodyParts.join()
 console.log(newArray);  // ...,..,..
 console.log(bodyParts); // [..,...,..]
 
-// slice , splice
+console.log("A", newArray);  //A foot,hands,eyes,mouth,nose
+console.log("A", bodyParts); //A [ 'foot', 'hands', 'eyes', 'mouth', 'nose' ]
 
+//slice with .join
+const myn1 = newArray.slice(0, 4)
+const myn2 = newArray.slice(0, 16)
 
+console.log(myn1); //foot
+console.log(myn2); //foot,hands,eyes,
+console.log("My", myn1, "aches"); // My foot aches
 
+//slice without .join
+const stationary = ["pen", "pencil", "notebook", "markers"];
+const slicedArray = stationary.slice(1, 3);
 
+console.log(slicedArray); //[ 'pencil', 'notebook' ]
 
