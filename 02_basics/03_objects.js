@@ -11,7 +11,7 @@ const JsUser = {
     last_name: "Khan",
     "full name": "Alishba Khan",
     mySym: "mykey1", //aese access nai hota
-    [mySym] : "mykey1", //aese hojayega with correct data type 
+    [mySym] : "mykey1", //aese hojayega with correct data type [Symbol(key1)]: 'mykey1'
     location: "Karachi",
     age: 19,
     Email: "alishbakhan@koogle.com",
@@ -24,7 +24,7 @@ console.log(JsUser["Email"]) //use this method
 console.log(JsUser["full name"]) //we can access full name by using [""] this method
 // console.log(JsUser."full name") //we can't access full name by using dot
 
-// console.log(JsUser.mySym); //mykey1 is the output but in actual it's no used as symbol
+console.log(JsUser.mySym); //mykey1 is the output but in actual it's no used as symbol
 console.log(JsUser[mySym]); // "mykey1" 
 
 console.log(typeof JsUser[mySym]);   // string (value type)
@@ -36,7 +36,26 @@ console.log(typeof mySym);          // symbol   (key type)
 //how to change the value of object
 JsUser.Email = "khanzalish@chatgpt.com"
 
-Object.freeze(JsUser) //changes won't propogate by using this command 
+// Object.freeze(JsUser) //changes won't propogate by using this command 
 JsUser.Email = "chashmish@microsoft.com" //ye execute ya impose nai hoga
 
 console.log(JsUser); 
+
+//how to add function in objects
+JsUser.greeting = function(){
+    console.log("Hello JS users");
+}
+
+console.log(JsUser.greeting); //[Function (anonymous)] => this is a reference of func
+JsUser.greeting(); //Hello JS users
+
+// console.log(JsUser.greeting()); //error => not a function
+// comment out this => Object.freeze(JsUser) isliye hello js user print ni hua
+
+// Another function
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this["full name"]}`);
+    console.log(`From, ${this.location}`);
+}
+JsUser.greetingTwo();
+
