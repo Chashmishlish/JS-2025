@@ -33,6 +33,10 @@ console.log(updated_num_array2);
 console.log(updated_num_array3);
 
 
+// isArray, .from , .of
+console.log(Array.isArray("Chashmish"));   // false
+console.log(Array.from("Alish")); // ['A', 'l', 'i', 's', 'h']
+console.log(Array.from({name: "Alishba"})); // []
 
 
 
