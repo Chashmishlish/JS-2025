@@ -45,3 +45,13 @@ let score2 = 200
 let score3 = 300
 
 console.log(Array.of(score1, score2, score3)); //[ 100, 200, 300 ]
+
+console.log(Array.of(1, 2, 3));  // Output: [1, 2, 3]
+console.log(Array.of("a", "b", "c")); // Output: ["a", "b", "c"]
+console.log(Array.of()); // Output: []
+
+//Diif in Array.of() and array()
+console.log(Array.of(3)); // [ 3 ]
+console.log(Array(3)); //[ <3 empty items> ]
+
+
