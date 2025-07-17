@@ -69,3 +69,38 @@ function anotherMethod ( m1, m2 ) {
 }
 const am = anotherMethod(10, 10)
 console.log("Result:", am) //Result: 100
+
+// Writing some other functions
+function loginUserMessage (username){
+    return `${username} just logged In`
+}
+
+// loginUserMessage("Alishba khan") // nothing will execute on this point bcz of no printing msg
+// console.log(loginUserMessage("Alishba khan")); //Alishba khan just logged In
+// console.log(loginUserMessage(" ")); //just logged In
+// console.log(loginUserMessage()); //undefined just logged In
+
+// >> if, else 
+    // we can check by using if statement , k kiya wo value hai k nai
+//agar result true hai tw means value mojood hai
+
+function loginPassword (setpassword){
+    if(setpassword === undefined) {
+        console.log("Please enter the password")
+        return //ye krne se neeche wala return execute nai hoga
+    }
+    return ` Your Password is: ${setpassword} `
+}
+
+console.log(loginPassword( ));
+
+function loginPassword (mypassword){
+    if(mypassword === undefined) {
+        console.log("Please enter the password")
+        return 
+    }
+    return ` Your Password is: ${mypassword} `
+}
+
+console.log(loginPassword( " olala" ));
+
