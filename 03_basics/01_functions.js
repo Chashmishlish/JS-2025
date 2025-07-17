@@ -168,3 +168,40 @@ function calPrice (val1, val2, ...num1){
 console.log(calPrice(200, 300, 400, 2000, 4300)); //  [ 400, 2000, 4300 ]
 // yahan per val1 = 200, val2 = 300, ...num1 => baki jo bachay ga wo sb isme ayeg
 
+
+
+// > Function in Object 
+const user = {
+    username: "Alishba",
+    price: 199
+}
+
+function handleObject (anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+
+}
+handleObject(user); //Username is Alishba and price is 199
+//directly bhi object pass krskte hain
+handleObject({
+    username: "Chashmish",
+    price: 999
+})  //Username is Chashmish and price is 999
+
+/*
+   type safety check krne parhte hai objects me, 
+   mtlb agar object jo banaya hai usme price ke jagah prices likhdea tow output undefined ayega
+   typescript me ye type checking hojati hai, jS me bhi hojate hai but code length increase hojate if else use krna prhta
+*/
+
+//arrays passing in function
+const myNewArray = [200, 300, 500, 600]
+
+function returnSecondValue(getArray){
+    return getArray[2]
+}
+
+console.log(returnSecondValue(myNewArray)); //500
+console.log(returnSecondValue([100, 200, 300, 500, 1000])); //300
+
+
+
