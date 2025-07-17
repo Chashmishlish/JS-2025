@@ -75,10 +75,10 @@ function loginUserMessage (username){
     return `${username} just logged In`
 }
 
-// loginUserMessage("Alishba khan") // nothing will execute on this point bcz of no printing msg
-// console.log(loginUserMessage("Alishba khan")); //Alishba khan just logged In
-// console.log(loginUserMessage(" ")); //just logged In
-// console.log(loginUserMessage()); //undefined just logged In
+loginUserMessage("Alishba khan") // nothing will execute on this point bcz of no printing msg
+console.log(loginUserMessage("Alishba khan")); //Alishba khan just logged In
+console.log(loginUserMessage(" ")); //just logged In
+console.log(loginUserMessage()); //undefined just logged In
 
 // >> if, else 
     // we can check by using if statement , k kiya wo value hai k nai
@@ -104,3 +104,36 @@ function loginPassword (mypassword){
 
 console.log(loginPassword( " olala" ));
 
+/*
+ in if statement () => parenthesis me we check values
+ in { ..... } => curly braces, we execute the code
+
+ if (undefined)  =>output : false value
+ if (" ") => false value , liken agar false value hogi tw {....}is block me hum jaenge he nahi
+ {....} is block me sirf tbhi jaate hain jab humare pas true value ho
+ tow aese me code kuch is trhan likhen ge if (!username ) {...} 
+ ! => not
+*/
+
+function logIn (username){
+    if(!username){
+        console.log("Please enter a username"); //please enter username
+        return 
+    }
+    return `${username} you are logged in! ` //undefined
+}
+
+console.log(logIn(  ));
+
+//   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+function loggedIn (username = "Roma"){
+    if(!username){
+        console.log("Please enter a username"); //ye block run he nai hoga
+        return 
+    }
+    return `${username} just logged in! `
+}
+
+console.log(loggedIn(  )); // Roma just logged in
+// agar argument me koi value pass krde tow wo roma ko over-write krdegi
+console.log(loggedIn( "Resham" )); //Resham just logged in
