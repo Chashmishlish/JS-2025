@@ -196,3 +196,10 @@ console.log(Object.keys(googleUser).length);  //3
 console.log(Object.values(googleUser).length); //3
 console.log(Object.entries(googleUser).length); //3
 
+//looping in object
+//agar value exists na kre tow how to ask
+console.log(tinderUser.hasOwnProperty('designation')); //false
+console.log(tinderUser.hasOwnProperty('age')); //true
+
+
+
