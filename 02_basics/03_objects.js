@@ -59,3 +59,18 @@ JsUser.greetingTwo = function(){
 }
 JsUser.greetingTwo();
 
+// Object with the help of constructor 
+const linkedlnUser = new Object () // {}
+const tinderUser = {}  //{}
+
+linkedlnUser.id = "1o1"
+linkedlnUser.name = "Jacky shaky"
+linkedlnUser.isLoggedIn = false
+
+tinderUser.name = "Sharma ji"
+tinderUser.age = 75
+tinderUser.finding = "young girl"
+
+console.log(linkedlnUser); //{ id: '1o1', name: 'Jacky shaky', isLoggedIn: false }
+console.log(tinderUser);   //{ name: 'Sharma ji', age: 75, finding: 'young girl' }
+
