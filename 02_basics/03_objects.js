@@ -92,4 +92,26 @@ console.log(regularUser.fullname.First_name); //undefined
 
 console.log(regularUser.fullname.userfullname.First_name); //Mirza
 console.log(regularUser.fullname.userfullname.last_name); //Baig
+console.log(regularUser.Email); //mirza@gmail.com
+
+// Question mark case will be discussed further
+console.log(regularUser.name?.userfullname); //undefined
+
+//Combine/merge objects
+const objectOne = {1: "axe", 2:"yatch"}
+const objectTwo = {3: "ox",  4:"fox"}
+
+const objectThree = { objectOne, objectTwo } //array wali problem will occur here too
+console.log(objectThree); //output: object inside object 
+
+//another syntax
+const objt = Object.assign(objectOne, objectTwo)
+console.log(objt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
+
+//another syntax
+const objtt = Object.assign({}, objectOne, objectTwo) //{} =>optional parameter
+console.log(objtt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
+
+
+
 
