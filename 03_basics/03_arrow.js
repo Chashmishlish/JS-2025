@@ -72,6 +72,37 @@ console.log(" IMPLICIT RETURN ")
  //parenthesis krenge tow return keyword nai likhna huga => implicit return
 
 
+console.log("  ") 
+console.log(" To return an Object") 
+    // const detail = (num1 , num2) => {username: "Sara" } //undefined
+       const detail = (num1 , num2) => ({username: "Sara"}) //{ username: 'Sara' }
+
+console.log(detail());
+
+/*
+ Arrow functions usage
+
+const myArray = [2, 3, 4, 5, 6]
+
+myArray.forEach(function() {} )
+myArray.forEach(() => {} )
+myArray.forEach(() => () )
+
+*/
+console.log("  ") 
+console.log(" More Examples using Array") 
+const myArray = [2, 3];
+
+myArray.forEach(function(element) {
+  console.log("Anonymous function:", element);
+});                      // Anonymous function
 
 
- 
+myArray.forEach((element) => {
+  console.log("Arrow function with block:", element);
+});                      // Arrow function with block
+
+
+myArray.forEach((element) => (
+  console.log("Arrow function implicit return:", element)
+));                // Arrow function with implicit return
