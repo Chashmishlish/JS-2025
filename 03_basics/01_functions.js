@@ -62,3 +62,10 @@ function not_execute ( fun1 , fun2 ) {
 const notexecute = not_execute(10, 20)
 console.log("Result:", notexecute) //Result: 30
 
+// >> another method
+function anotherMethod ( m1, m2 ) {
+    return m1 * m2
+    
+}
+const am = anotherMethod(10, 10)
+console.log("Result:", am) //Result: 100
