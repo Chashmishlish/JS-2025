@@ -36,9 +36,29 @@ function toadd (num1, num2) {
 
 toadd(3, 9) //12
 const result = toadd(3, 3) //ye hogaya variable me store //6
-console.log("Result:", result); //undefined
+// console.log("Result:", result); //undefined
 
 //result k ander value undefined kese gayi? 
 // yei interesting concept hai k, function se humne kya wapis bejha
 
+// Okay so ways of writing functions
+function add (numb1, numb2){
+    let res = numb1 + numb2 //variable lenge console.log nai
+    return res   //means jb mera func execute hojayega uske bd is res ko return krdo
+}
+
+const res = add(2, 8)
+console.log("Result:", res) //Result: 10
+
+// >> Execute nai hoga
+function not_execute ( fun1 , fun2 ) {
+    let notexecute = fun1 + fun2 
+    console.log("Alishba"); //ALishba
+    return notexecute
+    // console.log("Alishba"); //ye execute nai hoga qk by default function ke definition ka
+    //ek rule hota hy k return jo apne krdea uske bd koi kaam nai krega function
+    
+}
+const notexecute = not_execute(10, 20)
+console.log("Result:", notexecute) //Result: 30
 
