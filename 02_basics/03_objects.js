@@ -100,6 +100,7 @@ console.log(regularUser.name?.userfullname); //undefined
 //Combine/merge objects
 const objectOne = {1: "axe", 2:"yatch"}
 const objectTwo = {3: "ox",  4:"fox"}
+const objectFour = {5: "Van",  6:"Pan"}
 
 const objectThree = { objectOne, objectTwo } //array wali problem will occur here too
 console.log(objectThree); //output: object inside object 
@@ -109,8 +110,27 @@ const objt = Object.assign(objectOne, objectTwo)
 console.log(objt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
 
 //another syntax
-const objtt = Object.assign({}, objectOne, objectTwo) //{} =>optional parameter
+const objtt = Object.assign({}, objectOne, objectTwo, objectFour) //{} =>optional parameter
 console.log(objtt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
+
+//If we keep the keys same
+const KeyValue1 = {1: "Akar", 2: "Bakkar" , 3:"bambay" }
+const keyValue2 = {3: "Boo", 4:"Assi-Naway", 5: "Pooray-Soo"}
+
+const K_values = Object.assign({}, KeyValue1, keyValue2)
+console.log(K_values);
+
+/*
+Output:
+{
+  '1': 'Akar',
+  '2': 'Bakkar',
+  '3': 'Boo',
+  '4': 'Assi-Naway',
+  '5': 'Pooray-Soo'
+}
+*/
+
 
 
 
