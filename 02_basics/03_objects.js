@@ -57,7 +57,7 @@ JsUser.greetingTwo = function(){
     console.log(`Hello JS user, ${this["full name"]}`);
     console.log(`From, ${this.location}`);
 }
-JsUser.greetingTwo();
+// JsUser.greetingTwo();
 
 // Object with the help of constructor 
 const linkedlnUser = new Object () // {}
@@ -71,8 +71,8 @@ tinderUser.name = "Sharma ji"
 tinderUser.age = 75
 tinderUser.finding = "young girl"
 
-console.log(linkedlnUser); //{ id: '1o1', name: 'Jacky shaky', isLoggedIn: false }
-console.log(tinderUser);   //{ name: 'Sharma ji', age: 75, finding: 'young girl' }
+// console.log(linkedlnUser); //{ id: '1o1', name: 'Jacky shaky', isLoggedIn: false }
+// console.log(tinderUser);   //{ name: 'Sharma ji', age: 75, finding: 'young girl' }
 
 //Object inside Object
 
@@ -86,13 +86,13 @@ const regularUser = {
     }
 }
 
-console.log(regularUser.fullname); //{ userfullname: { First_name: 'Mirza', last_name: 'Baig' } }
-console.log(regularUser.fullname.userfullname); //{ First_name: 'Mirza', last_name: 'Baig' }
-console.log(regularUser.fullname.First_name); //undefined
+// console.log(regularUser.fullname); //{ userfullname: { First_name: 'Mirza', last_name: 'Baig' } }
+// console.log(regularUser.fullname.userfullname); //{ First_name: 'Mirza', last_name: 'Baig' }
+// console.log(regularUser.fullname.First_name); //undefined
 
-console.log(regularUser.fullname.userfullname.First_name); //Mirza
-console.log(regularUser.fullname.userfullname.last_name); //Baig
-console.log(regularUser.Email); //mirza@gmail.com
+// console.log(regularUser.fullname.userfullname.First_name); //Mirza
+// console.log(regularUser.fullname.userfullname.last_name); //Baig
+// console.log(regularUser.Email); //mirza@gmail.com
 
 // Question mark case will be discussed further
 console.log(regularUser.name?.userfullname); //undefined
@@ -103,22 +103,22 @@ const objectTwo = {3: "ox",  4:"fox"}
 const objectFour = {5: "Van",  6:"Pan"}
 
 const objectThree = { objectOne, objectTwo } //array wali problem will occur here too
-console.log(objectThree); //output: object inside object 
+// console.log(objectThree); //output: object inside object 
 
 //another syntax
 const objt = Object.assign(objectOne, objectTwo)
-console.log(objt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
+// console.log(objt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
 
 //another syntax
 const objtt = Object.assign({}, objectOne, objectTwo, objectFour) //{} =>optional parameter
-console.log(objtt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
+// console.log(objtt); // { '1': 'axe', '2': 'yatch', '3': 'ox', '4': 'fox' }
 
 //If we keep the keys same
 const KeyValue1 = {1: "Akar", 2: "Bakkar" , 3:"bambay" }
 const keyValue2 = {3: "Boo", 4:"Assi-Naway", 5: "Pooray-Soo"}
 
 const K_values = Object.assign({}, KeyValue1, keyValue2)
-console.log(K_values);
+// console.log(K_values);
 
 /*
 Output:
@@ -132,10 +132,10 @@ Output:
 */
 
 //spread operator
-const value1_2 = {...KeyValue1 , ...keyValue2}
-const value2_1 = {...keyValue2 , ...KeyValue1}
-console.log(value1_2);
-console.log(value2_1);
+// const value1_2 = {...KeyValue1 , ...keyValue2}
+// const value2_1 = {...keyValue2 , ...KeyValue1}
+// console.log(value1_2);
+// console.log(value2_1);
 
 /*
 Output
@@ -155,3 +155,29 @@ Output
 }
 */
 
+//jab database se values ayenge tw ese ayenge => arrays of object
+const users = [
+    {  
+    id: 1,  //array => object (inside)
+    email: "pookie@gmail.com"
+    },
+    {
+    id: 1,
+    email: "pookie@gmail.com"
+    },
+    {
+    id: 1,
+    email: "pookie@gmail.com"
+}
+]
+
+console.log(" ");
+users[1].email
+console.log(tinderUser);
+
+//to access all the keys
+console.log(Object.keys(tinderUser)); //[ 'name', 'age', 'finding' ]
+
+//to acces all the values
+console.log(Object.keys(linkedlnUser)); //[ 'id', 'name', 'isLoggedIn' ]
+console.log(Object.values(linkedlnUser)); //[ '1o1', 'Jacky shaky', false ]
