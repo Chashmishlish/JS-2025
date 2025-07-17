@@ -50,7 +50,31 @@ function add (numb1, numb2){
 const res = add(2, 8)
 console.log("Result:", res) //Result: 10
 
-// >> Execute nai hoga
+// >> Execute nai hogaed In
+
+// >> if, else 
+    // we can check by using if statement , k kiya wo value hai k nai
+//agar result true hai tw means value mojood hai
+
+function loginPassword (setpassword){
+    if(setpassword === undefined) {
+        console.log("Please enter the password")
+        return //ye krne se neeche wala return execute nai hoga
+    }
+    return ` Your Password is: ${setpassword} `
+}
+
+console.log(loginPassword( ));
+
+function loginPassword (mypassword){
+    if(mypassword === undefined) {
+        console.log("Please enter the password")
+        return 
+    }
+    return ` Your Password is: ${mypassword} `
+}
+
+console.log(loginPassword( " olala" ));
 function not_execute ( fun1 , fun2 ) {
     let notexecute = fun1 + fun2 
     console.log("Alishba"); //ALishba
@@ -78,31 +102,7 @@ function loginUserMessage (username){
 loginUserMessage("Alishba khan") // nothing will execute on this point bcz of no printing msg
 console.log(loginUserMessage("Alishba khan")); //Alishba khan just logged In
 console.log(loginUserMessage(" ")); //just logged In
-console.log(loginUserMessage()); //undefined just logged In
-
-// >> if, else 
-    // we can check by using if statement , k kiya wo value hai k nai
-//agar result true hai tw means value mojood hai
-
-function loginPassword (setpassword){
-    if(setpassword === undefined) {
-        console.log("Please enter the password")
-        return //ye krne se neeche wala return execute nai hoga
-    }
-    return ` Your Password is: ${setpassword} `
-}
-
-console.log(loginPassword( ));
-
-function loginPassword (mypassword){
-    if(mypassword === undefined) {
-        console.log("Please enter the password")
-        return 
-    }
-    return ` Your Password is: ${mypassword} `
-}
-
-console.log(loginPassword( " olala" ));
+console.log(loginUserMessage()); //undefined just logg
 
 /*
  in if statement () => parenthesis me we check values
@@ -137,3 +137,34 @@ function loggedIn (username = "Roma"){
 console.log(loggedIn(  )); // Roma just logged in
 // agar argument me koi value pass krde tow wo roma ko over-write krdegi
 console.log(loggedIn( "Resham" )); //Resham just logged in
+
+//Shopping cart in ecommerce website
+// user add kre ja raha hai items aur hume nai pata kitne arguments aane walay hain
+// tow parameter tyar krne prte hain
+
+function calculateCartPrice (num1){
+    return num1 
+}
+console.log(calculateCartPrice(200, 300, 400)); //200 
+//only 200 is executing rest of the values aren't
+
+/*
+//bht saari values pass krne hain tow parameter ko bhi usi hisab se set krna padega
+    function calculateCartPrice (...num1){  
+    yahan hum (...) teen dots laga den ge which is called rest operator 
+    It is also called spread operator based on its use casee
+ */
+
+function calculatePrice (...num1){
+    return num1 
+}
+console.log(calculatePrice(200, 300, 400)); //  [ 200, 300, 400 ]
+//aese functional me multiple values/parameters pass hote hain
+
+//INTERVIEW Ques
+function calPrice (val1, val2, ...num1){
+    return num1 
+}
+console.log(calPrice(200, 300, 400, 2000, 4300)); //  [ 400, 2000, 4300 ]
+// yahan per val1 = 200, val2 = 300, ...num1 => baki jo bachay ga wo sb isme ayeg
+
