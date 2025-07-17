@@ -74,3 +74,22 @@ tinderUser.finding = "young girl"
 console.log(linkedlnUser); //{ id: '1o1', name: 'Jacky shaky', isLoggedIn: false }
 console.log(tinderUser);   //{ name: 'Sharma ji', age: 75, finding: 'young girl' }
 
+//Object inside Object
+
+const regularUser = {
+    Email : "mirza@gmail.com",
+    fullname: {
+        userfullname: {
+            First_name: "Mirza",
+            last_name: "Baig"
+        }
+    }
+}
+
+console.log(regularUser.fullname); //{ userfullname: { First_name: 'Mirza', last_name: 'Baig' } }
+console.log(regularUser.fullname.userfullname); //{ First_name: 'Mirza', last_name: 'Baig' }
+console.log(regularUser.fullname.First_name); //undefined
+
+console.log(regularUser.fullname.userfullname.First_name); //Mirza
+console.log(regularUser.fullname.userfullname.last_name); //Baig
+
