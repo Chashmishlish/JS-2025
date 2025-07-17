@@ -40,4 +40,38 @@ function chai (){
 }
 chai() 
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+console.log(">>>>>>>  ARROW FUNCTIONS  >>>>>>>>");
+const coffee = () => {
+    let username = "Kalish"
+    console.log(this); // {}
+    console.log(this.username) //undefined
+}
+coffee()
+
+console.log("  ") 
+console.log( "SYNTAX OF ARRO FUNCTION () => {} ");
+
+const addTwo = (num1 , num2 ) => {
+    return num1 + num2 
+}
+
+console.log(addTwo(3, 5)); //8
+
+console.log("  ") 
+console.log(" IMPLICIT RETURN ") 
+// isme paranthedis use nai krne prhte hain
+// implicit means mai maan leta hun tow apko return keyword likhne ke need nai hai
+//  const mul = (num1 , num2) => num1 * num2    //one way
+    const mul = (num1 , num2) => (num1 * num2) //another way
+
+
+ console.log(mul(3, 5)); //15
+
+ //curly bracket use krenge tw return keyword likhna parega => explicit return
+ //parenthesis krenge tow return keyword nai likhna huga => implicit return
+
+
+
+
+ 
