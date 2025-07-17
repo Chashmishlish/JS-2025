@@ -131,7 +131,27 @@ Output:
 }
 */
 
+//spread operator
+const value1_2 = {...KeyValue1 , ...keyValue2}
+const value2_1 = {...keyValue2 , ...KeyValue1}
+console.log(value1_2);
+console.log(value2_1);
 
-
-
+/*
+Output
+{
+  '1': 'Akar',
+  '2': 'Bakkar',
+  '3': 'Boo',
+  '4': 'Assi-Naway',
+  '5': 'Pooray-Soo'
+}
+{
+  '1': 'Akar',
+  '2': 'Bakkar',
+  '3': 'bambay',
+  '4': 'Assi-Naway',
+  '5': 'Pooray-Soo'
+}
+*/
 
