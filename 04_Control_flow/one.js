@@ -73,7 +73,18 @@ if (balance < 500) {
 }
 console.log("Less than 1200"); // true
 
+//Real-life example
+const userLoggedIn = true
+const debitCard = true
+const loggInFromGoggle = false
+const loggedInFromEmail = true
 
+// && => means user logged in bhi ho or debit bhi ho, check both conditions
+// || => ya tow google se login krle ya email se krle
+if (userLoggedIn && debitCard && 2 == 2) {
+    console.log("Allow to buy course");
+}
 
-
-
+if (loggInFromGoggle || loggedInFromEmail || GuessUser){
+    console.log("User logged In");
+}
