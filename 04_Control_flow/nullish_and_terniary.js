@@ -18,8 +18,9 @@ console.log(val1);
 
 
 /*
-Terinary Operator 
+Ternary Operator 
 condition ? true statement : false
+The ternary operator is a short way of writing if...else conditions.
 */
 
 const iceTeaPrice = 100
