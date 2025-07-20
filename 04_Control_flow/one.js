@@ -49,3 +49,4 @@ if (score > 100 ) {
 console.log(`User power: ${power}`) // Ref error: power is not defined
 // this is because of scope
 
+//short hand 
