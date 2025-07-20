@@ -46,7 +46,34 @@ if (score > 100 ) {
     let  power = "fly"
     console.log(`User power: ${power}`) //User power: fly
 }
-console.log(`User power: ${power}`) // Ref error: power is not defined
+// console.log(`User power: ${power}`) // Ref error: power is not defined
 // this is because of scope
 
-//short hand 
+//short hand notation => here implicit scope exists
+// this method is not a good practice
+
+const balanced = 1000
+if (balanced > 500) console.log("test"); //test
+
+const money = 5000
+if (money > 3000) console.log("test"), console.log("test2"); //execute hojayega
+
+const money2 = 5000
+if (money2 < 3000) console.log("test"), console.log("test2"); //execute nhi hoga
+
+
+// nested 
+const balance = 1000
+if (balance < 500) {
+    console.log("less than 500"); //flase - less than 500
+} else if(balance < 750){
+    console.log("less than 750") // false - less than 750
+} else if (balance < 900) {
+    console.log("less than 900"); //false
+}
+console.log("Less than 1200"); // true
+
+
+
+
+
