@@ -46,7 +46,7 @@ for (let i = 1; i <= 10; i++) {
 let myArray = ["CPU", "Monitor", "Mouse", "SSD", "Keyboard", "Headphone"]
 console.log(myArray.length);
 
-for (let index = 0; index <= myArray.length; index++) {
+for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
     console.log(element);
 }
@@ -61,6 +61,12 @@ Array ke size se bahar ka index access karna error nahi hai.
 Array ke size se bahar ka index assign karne se array ka size auto increase ho jata hai.
 for (let index = 0; index <= myArray.length; index++) { 
 is operator <= ka use kredenge tw output me undefined ajayega
+
+Understanding the Changing Of condition:
+agar index ++ nahi kea just index he likha chordea tow continuous loop me phas jayega
+Or usko ctrl + C krke rokna padega
+
 */
+
 
 
