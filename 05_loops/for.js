@@ -33,12 +33,19 @@ for (let i = 0; i <= 10; i++) {
 
 // console.log(element);
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
     console.log(`The Outer loop value is: ${i}`);
     
-    for (let j = 0; j <= 10; j++) {
+    for (let j = 1; j <= 10; j++) {
         // console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
-        console.log(i + '*' + j + ' = ' + i*j);
+        //console.log(i + '*' + j + ' = ' + i*j);
     } // it will print table from 1 till 10
+}
+
+//array declaration
+let myArray = ["CPU", "Monitor", "Mouse", "SSD", "Keyboard", "Headphone"]
+for (let index = 0; index < myArray.length; index++) {
+    const element = myArray[index];
+    console.log(element);
 }
 
