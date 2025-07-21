@@ -63,4 +63,5 @@ const value = framework.forEach( (item) => {
 })
 console.log(value); 
 
-//This is because forEach is a “void method” - It does not return anything, no matter what you do inside it.
+//This is because forEach is a “void method” 
+//It does not return anything, no matter what you do inside it.
