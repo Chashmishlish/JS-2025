@@ -25,6 +25,8 @@ framework.forEach( (item, index ,arr ) => {
     console.log(item, index, arr);
 })
 
+
+// Below -> the concept is used in database 
 const myCoding = [
     {
         languageName: "JavaScript",
@@ -47,4 +49,18 @@ myCoding.forEach( (item) => {
     console.log(item.languageName);
 })
 
-// this concept is used in database 
+
+// --------
+const values = framework.forEach( (item) => {
+    console.log(item);
+    
+})
+console.log(values); //it return undefined
+
+const value = framework.forEach( (item) => {
+    console.log(item);
+    return item  //undefined
+})
+console.log(value); 
+
+//This is because forEach is a “void method” - It does not return anything, no matter what you do inside it.
