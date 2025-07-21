@@ -20,4 +20,14 @@ for (const greet of greetings) {
     
 }
 
+// Maps => Map itself is an object, similar like arrays , 
+// koi duplicate value nai hote, unique values hold krta hai
+
+const map = new Map()
+map.set('PK', "Pakistan")
+map.set('US', "States Of America")
+map.set('FR', "France")
+map.set('PK', "Pakistan")
+
+console.log(map);
 
