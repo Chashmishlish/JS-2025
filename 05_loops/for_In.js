@@ -17,3 +17,14 @@ for (const key in programming) {
     console.log(programming[key]); 
 }
 
+const map = new Map()
+map.set('PK', "Pakistan")
+map.set('US', "States Of America")
+map.set('FR', "France")
+map.set('PK', "Pakistan")
+
+for (const key in map) {
+    console.log(key);
+}  //won't run
+
+// because Map is not iteratable 
