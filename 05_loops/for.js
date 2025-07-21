@@ -28,27 +28,27 @@ for (let i = 0; i <= 10; i++) {
     if (element == 6) {
         console.log(" 6 is the best number ") //phele ye print hoga 
     }
-    // console.log(element); 
+    console.log(element); 
 }
 
-// console.log(element);
+// console.log(element); //-error
 
 for (let i = 1; i <= 10; i++) {
-    // console.log(`The Outer loop value is: ${i}`);
+    console.log(`The Outer loop value is: ${i}`);
     
     for (let j = 1; j <= 10; j++) {
-        // console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
-        //console.log(i + '*' + j + ' = ' + i*j);
-    } // it will print table from 1 till 10
+        console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
+        console.log(i + '*' + j + ' = ' + i*j);
+    }   // it will print table from 1 till 10
 }
 
 //array declaration
 let myArray = ["CPU", "Monitor", "Mouse", "SSD", "Keyboard", "Headphone"]
-// console.log(myArray.length);
+    console.log(myArray.length);
 
 for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
-    // console.log(element);
+    console.log(element);
 }
 
 /*
