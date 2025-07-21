@@ -44,8 +44,23 @@ for (let i = 1; i <= 10; i++) {
 
 //array declaration
 let myArray = ["CPU", "Monitor", "Mouse", "SSD", "Keyboard", "Headphone"]
-for (let index = 0; index < myArray.length; index++) {
+console.log(myArray.length);
+
+for (let index = 0; index <= myArray.length; index++) {
     const element = myArray[index];
     console.log(element);
 }
+
+/*
+ JavaScript mein “out of bounds exception” (jo Java, C++ jaise languages mein hoti hain) nahi hoti. It means:
+Agar aap kisi array ke index ko access karte ho jo exist nahi karta, to JavaScript error nahi throw karega.
+Instead, wo simply undefined return karega.
+
+In JavaScript 
+Array ke size se bahar ka index access karna error nahi hai.
+Array ke size se bahar ka index assign karne se array ka size auto increase ho jata hai.
+for (let index = 0; index <= myArray.length; index++) { 
+is operator <= ka use kredenge tw output me undefined ajayega
+*/
+
 
