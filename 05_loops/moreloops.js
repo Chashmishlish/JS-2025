@@ -31,3 +31,12 @@ map.set('PK', "Pakistan")
 
 console.log(map);
 
+for (const key of map) {
+    console.log(key);
+}
+
+//shortcut for not keeping it array form - destructure of array
+for (const [key , value] of map) {
+    console.log(key, ":-" , value );
+}
+
