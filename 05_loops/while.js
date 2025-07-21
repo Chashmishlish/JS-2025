@@ -17,7 +17,7 @@ while (arr < myArray.length) {
     arr = arr + 1
 }
 
-//Do - while loop
+//Do - while loop ; kaam phele hoga, condition baad me check hogi
 
 let score = 1
 
@@ -25,3 +25,12 @@ do {
     console.log(`Score is: ${score}`);
     score ++
 } while (score <= 10);
+
+
+let scored = 11
+
+do {
+    console.log(`You Scored: ${scored}`);
+    scored ++
+} while (scored <= 10);
+
