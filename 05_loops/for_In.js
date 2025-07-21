@@ -17,6 +17,7 @@ for (const key in programming) {
     console.log(programming[key]); 
 }
 
+// for in loop on maps
 const map = new Map()
 map.set('PK', "Pakistan")
 map.set('US', "States Of America")
@@ -28,3 +29,5 @@ for (const key in map) {
 }  //won't run
 
 // because Map is not iteratable 
+
+
