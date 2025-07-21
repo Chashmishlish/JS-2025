@@ -28,13 +28,13 @@ for (let i = 0; i <= 10; i++) {
     if (element == 6) {
         console.log(" 6 is the best number ") //phele ye print hoga 
     }
-    console.log(element); 
+    // console.log(element); 
 }
 
 // console.log(element);
 
 for (let i = 1; i <= 10; i++) {
-    console.log(`The Outer loop value is: ${i}`);
+    // console.log(`The Outer loop value is: ${i}`);
     
     for (let j = 1; j <= 10; j++) {
         // console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
@@ -44,11 +44,11 @@ for (let i = 1; i <= 10; i++) {
 
 //array declaration
 let myArray = ["CPU", "Monitor", "Mouse", "SSD", "Keyboard", "Headphone"]
-console.log(myArray.length);
+// console.log(myArray.length);
 
 for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
-    console.log(element);
+    // console.log(element);
 }
 
 /*
@@ -69,4 +69,17 @@ Or usko ctrl + C krke rokna padega
 */
 
 
-
+/*
+How do we terminate or skip iterations in a loop
+   to terminate loop in middle
+   break and continue
+   break: loop ko foran rok deta hai aur bahar nikal jata hai.
+   continue: sirf current iteration skip karta hai, loop chalta rehta hai.
+----------------------------------
+   break → Terminate the loop completely
+Stops the loop immediately, even if there are iterations left.
+Control jumps out of the loop
+   continue → Skip current iteration
+Skips the rest of the current iteration and jumps to the next one.
+Loop continues normally after that.
+*/
