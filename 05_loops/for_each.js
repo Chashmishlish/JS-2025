@@ -25,4 +25,26 @@ framework.forEach( (item, index ,arr ) => {
     console.log(item, index, arr);
 })
 
+const myCoding = [
+    {
+        languageName: "JavaScript",
+        languageFile: "JS"
+    },
+    {
+        languageName: "python",
+        languageFile: "py"
+    },
+    {
+        languageName: "Java",
+        languageFile: "java"
+    },
+]
 
+myCoding.forEach( (item) => {
+    console.log(item);
+})
+myCoding.forEach( (item) => {
+    console.log(item.languageName);
+})
+
+// this concept is used in database 
