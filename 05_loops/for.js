@@ -37,6 +37,8 @@ for (let i = 0; i <= 10; i++) {
     console.log(`The Outer loop value is: ${i}`);
     
     for (let j = 0; j <= 10; j++) {
-        console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
-    }
+        // console.log(`The Inner loop value is: ${j} and inner loop ${i}`);
+        console.log(i + '*' + j + ' = ' + i*j);
+    } // it will print table from 1 till 10
 }
+
