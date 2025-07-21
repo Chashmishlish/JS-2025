@@ -14,3 +14,10 @@ for (const num of arr) {
     console.log(num);
 }
 
+const greetings = "Hello Alishba!"
+for (const greet of greetings) {
+    console.log(`Each char is ${greet}`);
+    
+}
+
+
