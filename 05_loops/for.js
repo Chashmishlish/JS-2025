@@ -92,3 +92,11 @@ for (let index = 1; index <= 20; index++) {
     console.log(`value of i is: ${index}`);
 }
 
+for (let index = 1; index <= 20; index++) {
+    if (index == 6) {
+        console.log(`Detected 6`);
+        continue //loop will not break and will cont... after 6
+    }
+    console.log(`value of i is: ${index}`); 
+}
+
