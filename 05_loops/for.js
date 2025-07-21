@@ -83,3 +83,12 @@ Control jumps out of the loop
 Skips the rest of the current iteration and jumps to the next one.
 Loop continues normally after that.
 */
+
+for (let index = 1; index <= 20; index++) {
+    if (index == 6) {
+        console.log(`Detected 6`);
+        break  //loop will break and won't cont... after 6
+    }
+    console.log(`value of i is: ${index}`);
+}
+
