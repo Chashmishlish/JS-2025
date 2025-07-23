@@ -47,3 +47,29 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce( (acc, item) => acc + item.price, 0)
 console.log(priceToPay);
+
+
+console.log(" ");
+console.log(" >>>> FIND THE MAX NUMBER >>>> ");
+
+const numbers = [10, 45, 2, 78, 34];
+const max = numbers.reduce((acc, curr) => {
+    return curr > acc ? curr : acc;
+}, numbers[0]);
+
+console.log(max); // 78
+
+
+console.log(" ");
+console.log(" >>>> Multiplication Table of 2 >>>> ");
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const tableOfTwo = nums.reduce((acc, curr) => {
+    acc.push(`2 x ${curr} = ${2 * curr}`);
+    return acc;
+}, []);
+
+console.table(tableOfTwo);
+
+
+
