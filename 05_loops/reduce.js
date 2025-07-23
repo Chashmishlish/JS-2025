@@ -12,3 +12,12 @@ const myTotal = myNums.reduce( function (accumulator, currentVal) {
 }, 0)   //0 is the accumulator value
 
 console.log(myTotal);
+
+console.log(" >>>> USING ARROW FUNCTION >>>>> ");
+
+const myttl = myNums.reduce ( (acc , curr) => acc+curr , 4 )
+    // console.log(`Accumulator: ${acc} and Current Value: ${curr}`); //won't access like this without using return, and always access before return line means write this code above return 
+console.log("When the number is 4:" ,myttl);
+
+const myttll = myNums.reduce ( (acc , curr) => { return acc+curr} , 3 )
+console.log("When the number is 3:" , myttll);
