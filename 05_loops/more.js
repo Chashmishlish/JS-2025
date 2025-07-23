@@ -67,8 +67,25 @@ const books = [
 ];
 
 const userBooks = books.filter ( (bk) => bk.edition == 2022  )
-console.log(userBooks);
+const userBook = books.filter((bk) => bk.edition === 2022 && bk.title === 'Book Ten'); //[]
 
+// const userBooks = books.filter ( (bk) => bk.edition == 2022, bk.title == 'Book Ten'  ) 
+// error above bcz //filter() only takes one argument: a callback function that returns true or false for each item.
+
+console.log(userBooks);
+console.log(userBook);
+
+console.log(" ");
+console.log("Using let variable ");
+
+let userB = books.filter ( (bk) => bk.genre == 'Non-Fiction') //accessed but overright later
+
+// userB = books.filter ( (bk) => { bk.publish >= 2000 }) //[]
+userB = books.filter ( (bk) => {return bk.publish >= 1995 }) //values will be accessed
+userB = books.filter ( (bk) => {
+    return bk.publish >= 1995 && bk.genre === "History" }) //values will be accessed
+
+console.log(userB);
 
 
 
