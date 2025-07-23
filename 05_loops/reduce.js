@@ -21,3 +21,29 @@ console.log("When the number is 4:" ,myttl);
 
 const myttll = myNums.reduce ( (acc , curr) => { return acc+curr} , 3 )
 console.log("When the number is 3:" , myttll);
+
+
+console.log(" ");
+console.log(">>>>> Example Of Shopping Cart >>>>>");
+
+const shoppingCart = [
+    {
+        itemName: "JS Course",
+        price: 2999,
+    },
+    {
+        itemName: "Py Course",
+        price: 3999,
+    },
+    {
+        itemName: "DevOps Course",
+        price: 5999,
+    },
+    {
+        itemName: "DS Course",
+        price: 12999,
+    }
+]
+
+const priceToPay = shoppingCart.reduce( (acc, item) => acc + item.price, 0)
+console.log(priceToPay);
