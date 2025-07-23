@@ -72,4 +72,24 @@ const tableOfTwo = nums.reduce((acc, curr) => {
 console.table(tableOfTwo);
 
 
+console.log(" ");
+console.log(" >>>> Odd Numbers >>>> ");
 
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const oddNumbers = number.reduce((acc, curr) => {
+    if (curr % 2) acc.push(curr);
+    return acc;
+}, []);
+
+console.log(oddNumbers); 
+
+
+console.log(" ");
+console.log(" >>>> Even Numbers >>>> ");
+
+const EvenNumbers = number.reduce((acc, curr) => {
+    if (curr % 2 == 0) acc.push(curr);
+    return acc;
+}, []);
+
+console.log(EvenNumbers); 
