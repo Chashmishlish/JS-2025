@@ -33,3 +33,5 @@ const newNums = myNumbers
                 .filter( (num) => num >= 48)  // [ 48, 58, 68, 78, 88, 98 ]
 
 console.log(newNums);
+console.log(" ");
+
