@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM learning</title>
+
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <div class="bg-black">
-            <h1 class="heading"> DOM Learning </h1>
-            <p> The Document Object Model </p>
+
+<body class="bg-black">
+        <div>
+            <h1 id = "title" class="heading"> DOM Learning <span style="display:none"> test text </span> </h1>
+            <p> The Document Object Model.</p>
+            <h2 id="heads"></h2>
+            <p id="myP"></p>
         </div>
-    </div>
+        <script src="practice.js"></script>
 </body>
 </html>
+
+
