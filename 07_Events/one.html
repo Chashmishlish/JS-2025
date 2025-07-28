@@ -45,14 +45,6 @@
    japan.style.border = "6px solid purple";
     });
     
-       document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
-    }, false)
 
     //Event propagation
     // false = event bubling
@@ -79,7 +71,17 @@
         console.log("google clicked");
     }, false)
 
+// "I want that whenever I click on any of the <li> elements (or their images), they should disappear."
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        console.log(e.target); //e => event
+        console.log(e.target.parentnode);
+        
+    }, false)
+
+
 
     
 </script>
 </html>
+ 
