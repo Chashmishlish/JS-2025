@@ -5,17 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Request</title>
 </head>
-<body style="background-color: rgba(165, 42, 99, 0.473);">
-      <h1>XML (Extensible Markup Language)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API & V8 Engine</title>
+</head>
+<body style="background-color: rgba(165, 42, 99, 0.473); font-family: Georgia, 'Times New Roman', Times, serif; padding: 20px; color: #222;">
 
-    <div style="font-family: Georgia, 'Times New Roman', Times, serif;">
+  <h1 style="color: #800040;">XML (Extensible Markup Language)</h1>
+
   <p>This is a powerful way to store data in a format that can be stored, searched, and shared.</p>
   
-  <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">
-    Learn about XMLHttpRequest on MDN</a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank"
+     style="color: white; background-color: #6a0f49; padding: 8px 12px; text-decoration: none; border-radius: 5px; display: inline-block; margin-bottom: 20px;">
+    Learn about XMLHttpRequest on MDN
+  </a>
 
+  <p>V8 Engine, that runs the scripts, so one of those engines is the v8 engine.</p>
+  <p>V8 Engine repository is also available on GitHub, the complete engine is written in C++.</p>
+  <p>The most powerful thing about JavaScript is that it actually runs in C++.</p>
+  <p>It doesn't mean C++ is the best language. Python also runs in the same way because it is a C++ language and all these are the wrappers on it.</p>
+  <p>V8 engine gives all these debugging tools, some API access so that you can actually work.</p>
+  <p><code>console.log</code> and other things are also available here — the actual implementation is this, the runtime itself.</p>
+
+  <a href="https://github.com/v8/v8" target="_blank"
+     style="color: white; background-color: #333; padding: 8px 12px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px 0;">
+    V8 Engine - GitHub Repository
+  </a>
+
+  <div style="margin-top: 20px;">
+    <button onclick="window.open('https://github.com/v8/v8/tree/main/src', '_blank')"
+            style="padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; background-color: #4CAF50; color: white; cursor: pointer;">
+      SRC
+    </button>
+    <button onclick="window.open('https://github.com/v8/v8/blob/main/src/d8/d8-console.cc', '_blank')"
+            style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #2196F3; color: white; cursor: pointer;">
+      Console.log
+    </button>
   </div>
+
 </body>
+</html>
+
 <script>
     // object 
     const requestUrl = "https://api.github.com/users/Chashmishlish"
@@ -47,5 +80,7 @@
     }
 }  
     xhrr.send(); //ab ye call hoga
+
+    
 </script>
 </html>
