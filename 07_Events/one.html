@@ -21,5 +21,11 @@
 <script>
     // In JS, events run sequentially, but sometimes we can ignore using syncronous 
     // Avoid injecting in html, avoid this approach eg:  alt="" onclick="alert('owl')"></li>
+   // React me different approach hote hai so don't mix that with it
+   // 2nd approach: 
+   document.getElementById('owl').onclick = function(){
+    alert("Owl is clicked")
+   }
+
 </script>
 </html>
