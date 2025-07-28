@@ -19,6 +19,16 @@
    </div>    
 </body>
 <script>
+
+    // Method attacEvent() - application ko internet explore per chalana 
+    // jQuery - on -> framework tha ye, wahan on event listener tha
+
+    // what to study...
+    // types, timestamp , defaultPrevented => default behavior can be changed,
+    // target , toElement , srcElement (latest *), currenttarget
+    // clientX, clientY, screenX , screenY
+    // altkey , ctrlkey , shiftkey, keyCode
+
       // In JS, events run sequentially, but sometimes we can ignore using syncronous 
      // Avoid injecting in html, avoid this approach eg:  alt="" onclick="alert('owl')"></li>
     // React me different approach hote hai so don't mix that with it
@@ -31,6 +41,43 @@
     alert("owl clicked again!")
    }, false)
    // this false is a third parameter which is actually default , we don't usually write it
+   japan.addEventListener("dblclick", () => {
+   japan.style.border = "6px solid purple";
+    });
+    
+       document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    }, false)
 
+    //Event propagation
+    // false = event bubling
+    // true = event capturing
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e);
+    }, false) 
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("Okay jee owl clicked");
+        e.stopPropagation() // ye krne se top wali propagation nahi hoge means clicked inside the ul nahi execute hoga
+    }, false)
+
+    // kon phele print hoga
+    // bubble goes from botton to top => owl clcik hoga tw phele okay jee wala hoga print then inside ul wala
+
+
+
+
+
+
+
+    
 </script>
 </html>
