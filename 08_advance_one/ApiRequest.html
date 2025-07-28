@@ -28,13 +28,22 @@
    const requesturl = "https://api.github.com/users/Chashmishlish"
     const xhrr = new XMLHttpRequest();
     xhrr.open('GET', requesturl )
-    xhrr.onreadystatechange = function(){   //to monitor state continously
-        console.log(xhrr.readyState); //jab jab state chang horahi hai tow func execute horaha
-    // }
-    // console.log(xhrr.readyState);
-    // to detect state we will comment above to lines to write code furthher
+    xhrr.onreadystatechange = function(){             //to monitor state continously
+        console.log(xhrr.readyState);                //jab jab state chang horahi hai tow func execute horaha
+        // }
+        // console.log(xhrr.readyState);
+        // to detect state we will comment above to lines to write code furthher
     if(xhrr.readyState === 4){
-        console.log(this.responseText);  //use of this.
+        // console.log(this.responseText);  //use of this.
+        //agar hum isko variable me hold krlen tow ye object humare pas data k ander agaya hai, data variable hai
+        // const data = this.responseText
+        // const data = Object (this.responseText)     //converted into object
+        const data = JSON.parse(this.responseText)     //liken hume JSON me krna hai
+        console.log(data.followers);               //console log me undefined show hoga jab ke data humare pas hai
+        console.log(data);
+        console.log(typeof data);                  //iski type string hai isliye isko convert krenge obj me
+                                                  //Json me convert krne k baad type change hojayegi => object
+                                                 // or follower count bhi ajayega
     }
 }  
     xhrr.send(); //ab ye call hoga
