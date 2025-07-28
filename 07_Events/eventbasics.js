@@ -8,4 +8,26 @@ const randomColor = function(){
     } 
     return color; 
 }
-console.log(randomColor());
+
+let intervalId   //global scope me krenge declare isko takay clear interval per error na aye
+const startChangingColor = function(){
+    // intervalId = setInterval(changeBgcolor, 1000); //acceptable way
+    if (!intervalId) {
+    intervalId = setInterval(changeBgcolor, 1000);
+}
+
+    function changeBgcolor(){
+        document.body.style.backgroundColor = randomColor();
+    }
+};
+const stopChangingColor = function(){
+    clearInterval(intervalId);
+    intervalId = null //flush out krdea hai professional way hai ye, dereference krdea
+}
+
+document.querySelector('#start').
+addEventListener('click', startChangingColor)
+
+document.querySelector('#stop').
+addEventListener('click', stopChangingColor)
+
