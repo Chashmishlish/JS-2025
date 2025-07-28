@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1> Chashmishlish </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //function - set time out ; method to call API
+    // handler ek function hy jiska naam nh hota
+    setTimeout(function(){
+        console.log("Alishba sabar");
+    }, 2000) //2000 => 2 sec
+     // one more way to code thisb
+    const saylish = function(){
+        console.log("Alishba ruko");
+    }
+    setTimeout(saylish, 3000)
+
+    
+
+</script>
+</html>
