@@ -72,11 +72,19 @@
     }, false)
 
 // "I want that whenever I click on any of the <li> elements (or their images), they should disappear."
+    
     document.querySelector('#images').addEventListener
     ('click', function(e){
         console.log(e.target); //e => event
         console.log(e.target.parentnode);
-        
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode //to access parent
+            removeIt.remove()               //we can do this too, also use below
+            //removeIt.parentNode.removeChild(removeIt)
+        }
     }, false)
 
 
