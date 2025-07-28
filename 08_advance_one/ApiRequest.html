@@ -21,8 +21,22 @@
     const requestUrl = "https://api.github.com/users/Chashmishlish"
     const xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl )
-    //console.log("here!");
+    console.log(xhr.readyState);
     xhr.send() //ab ye call hoga
 
+   // to track readyState continousoly 
+   const requesturl = "https://api.github.com/users/Chashmishlish"
+    const xhrr = new XMLHttpRequest();
+    xhrr.open('GET', requesturl )
+    xhrr.onreadystatechange = function(){   //to monitor state continously
+        console.log(xhrr.readyState); //jab jab state chang horahi hai tow func execute horaha
+    // }
+    // console.log(xhrr.readyState);
+    // to detect state we will comment above to lines to write code furthher
+    if(xhrr.readyState === 4){
+        console.log(this.responseText);  //use of this.
+    }
+}  
+    xhrr.send(); //ab ye call hoga
 </script>
 </html>
