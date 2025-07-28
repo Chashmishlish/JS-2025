@@ -19,13 +19,18 @@
    </div>    
 </body>
 <script>
-    // In JS, events run sequentially, but sometimes we can ignore using syncronous 
-    // Avoid injecting in html, avoid this approach eg:  alt="" onclick="alert('owl')"></li>
-   // React me different approach hote hai so don't mix that with it
+      // In JS, events run sequentially, but sometimes we can ignore using syncronous 
+     // Avoid injecting in html, avoid this approach eg:  alt="" onclick="alert('owl')"></li>
+    // React me different approach hote hai so don't mix that with it
    // 2nd approach: 
    document.getElementById('owl').onclick = function(){
     alert("Owl is clicked")
-   }
+   } // thsi approach is also not good, having less features
+   
+   document.getElementById('owl').addEventListener('click', function(){
+    alert("owl clicked again!")
+   }, false)
+   // this false is a third parameter which is actually default , we don't usually write it
 
 </script>
 </html>
