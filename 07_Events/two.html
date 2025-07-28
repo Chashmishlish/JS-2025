@@ -21,9 +21,26 @@
     }
     setTimeout(saylish, 3000)
 
+    const changeText = function(){
+        document.querySelector('h1').innerHTML
+        = "Bestish-liSh";
+    }
+    setTimeout(changeText, 3000)  // text will change after dedicated time
+    
     // to change h1
     // document.querySelector('h1').innerHTML
     // = "Bestish-liSh"
+
+    //clear time out -> referencemngta hy k konsa wala set time hhatana chahty
+    const changeMe = setTimeout(changeText, 2000) // Schedule hua
+    clearTimeout(changeMe) //foran cancel bhi ho gaya
+    // Don't clear Time out it if you want it to execute
+    // Or, if you want to conditionally clear it:
+    document.querySelector("#stop").
+    addEventListener("click", function () {
+    clearTimeout(changeMe);
+    console.log("Timeout cleared!");
+});
 
 </script>
 </html>
