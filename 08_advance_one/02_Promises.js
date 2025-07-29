@@ -4,4 +4,25 @@
 // jo bhi task apko diya gaya hai wo queue me lagh gaya hai magar laghte he complete nai hoga
 
 // 3 states of promises: pending, fulfilled, rejected
+// mostly promises are consumed, bante kum hain consume zyda hote hain
+// libraries : Q and blue bird but ab node js ne direct support dedea hai (native promises) 
 
+
+// How promises are made
+const promiseOne = new Promise(function(resolve, reject){
+    // Do an async task 
+    // DB calls, cryptography, network
+    setTimeout(function() {
+        console.log('Async task is complete');
+        resolve()
+    }, 1000);
+})
+
+// promise ko humne ek variable me store kea, create krlea ab consume krna hai
+//.then ka straight connection hai resolve k saath .then k ander ek callback milta hai means function
+
+promiseOne.then(function(){
+    console.log("Promise consumed"); //ye tow print he nahi hua
+})
+
+// ab connect krenge in dono ko by resolve ()
