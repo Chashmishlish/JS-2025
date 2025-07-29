@@ -26,3 +26,13 @@ promiseOne.then(function(){
 })
 
 // ab connect krenge in dono ko by resolve ()
+// hum yehi kaam variable me store kre bina bhi krskte hain (see below)
+
+new Promise(function(resolve, reject){
+    setTimeout(function(){
+        console.log("Async task 2!");
+        resolve(); 
+    }, 3000)
+}).then(function(){
+    console.log("Async 2 resolved!");
+});
