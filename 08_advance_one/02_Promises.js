@@ -52,7 +52,7 @@
 // Error based checking per either true or false
 const promiseFour = new Promise(function (resolve, reject){
     setTimeout(function(){
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "Alishba" , password: "123"})
         }else{
@@ -64,9 +64,11 @@ const promiseFour = new Promise(function (resolve, reject){
 const username = promiseFour.then((user) => {
     console.log(user);
     return user.username
-}).then((username) => {    //chaning concept
+})
+.then((username) => {    //chaning concept
     console.log(username); 
-}).catch(function(err){
+})
+.catch(function(err){
     console.log(err);
 })
 
