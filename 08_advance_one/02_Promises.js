@@ -77,7 +77,7 @@ const username = promiseFour.then((user) => {
 //Promise five
 const promiseFive = new Promise (function(resolve, reject) {
     setTimeout(function(){
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "Javascript" , password: "learnjs"})
         } else {
@@ -90,6 +90,28 @@ async function consumePromiseFive() {
     const response = await promiseFive 
     console.log(response);
 }
-consumePromiseFive()
+consumePromiseFive() 
 
 //async await can't handle problemsdirectly
+// both syntax are correct promise five and clone five 
+
+const promiseFiveClone = new Promise (function(resolve, reject) {
+    setTimeout(function(){
+        let error = true
+        if (!error) {
+            resolve({username: "Python" , password: "xyz"})
+        } else {
+            reject('ERROR: JS went wrong!')
+        }
+    }, 5000)
+});
+
+async function consumePromiseFiveClone(){
+    try {
+        const response = await promiseFiveClone 
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+consumePromiseFiveClone()
