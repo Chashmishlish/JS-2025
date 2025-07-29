@@ -77,7 +77,7 @@ const username = promiseFour.then((user) => {
 //Promise five
 const promiseFive = new Promise (function(resolve, reject) {
     setTimeout(function(){
-        let error = false
+        let error = true
         if (!error) {
             resolve({username: "Javascript" , password: "learnjs"})
         } else {
@@ -91,3 +91,5 @@ async function consumePromiseFive() {
     console.log(response);
 }
 consumePromiseFive()
+
+//async await can't handle problemsdirectly
