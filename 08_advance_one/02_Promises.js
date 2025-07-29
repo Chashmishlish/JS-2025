@@ -36,3 +36,15 @@ new Promise(function(resolve, reject){
 }).then(function(){
     console.log("Async 2 resolved!");
 });
+
+
+// to pass data
+const promiseThree = new Promise(function (resolve, reject){
+    setTimeout(function(){
+        resolve({username: "Alishba" , email: "alishba@example.com"})
+    }, 4000)
+})
+
+promiseThree.then(function(user){
+    console.log(user); //{ username: 'Alishba', email: 'alishba@example.com' }
+})
