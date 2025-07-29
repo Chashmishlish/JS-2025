@@ -74,3 +74,20 @@ const username = promiseFour.then((user) => {
     () => console.log("The Promise is either resolved or rejected!"))
 
 
+//Promise five
+const promiseFive = new Promise (function(resolve, reject) {
+    setTimeout(function(){
+        let error = false
+        if (!error) {
+            resolve({username: "Javascript" , password: "learnjs"})
+        } else {
+            reject('ERROR: JS went wrong!')
+        }
+    }, 5000)
+});
+
+async function consumePromiseFive() {
+    const response = await promiseFive 
+    console.log(response);
+}
+consumePromiseFive()
