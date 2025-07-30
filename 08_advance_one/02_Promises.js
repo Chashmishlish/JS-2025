@@ -107,7 +107,7 @@ const promiseFiveClone = new Promise (function(resolve, reject) {
 });
 
 async function consumePromiseFiveClone(){
-    try {
+    try {           // here, error handled gracefully
         const response = await promiseFiveClone 
         console.log(response);
     } catch (error) {
@@ -115,3 +115,8 @@ async function consumePromiseFiveClone(){
     }
 }
 consumePromiseFiveClone()
+
+//fetch
+async function getAllUsers(){
+    fetch()
+}
