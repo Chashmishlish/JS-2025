@@ -117,7 +117,6 @@ async function consumePromiseFiveClone(){
 consumePromiseFiveClone()
 
 // Ek async function define kiya gaya hai jo users fetch karega
-
 async function getAllUsers() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -130,6 +129,15 @@ async function getAllUsers() {
 }
 getAllUsers();
 
-
+//.then .catch method (same as above but different method) results will be same
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((resp )=> {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+    
+})
+.catch((eror) => console.log(eror));
 
 
